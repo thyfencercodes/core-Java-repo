@@ -22,6 +22,11 @@ public class MainEmployee {
 		
 		System.out.println(emp.getEmployeeId()+" "+emp.getEmployeeName()+" "+emp.getEmployeeSalary());
 	
+		//emp1 to emp2
+		Employee emp2=new Employee(emp1);
+		
+		System.out.println(emp1);
+		System.out.println(emp2);
 	}
 
 }

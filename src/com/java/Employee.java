@@ -19,11 +19,22 @@ public class Employee {
 	//parameterized constructor
 	public Employee(long employeeId,String employeeName,double employeeSalary, String employeeEmail, long employeePhone)
 	{
+		//this refers to current class object
 		this.employeeId=employeeId;
 		this.employeeName=employeeName;
 		this.employeePhone=employeePhone;
 		this.employeeSalary=employeeSalary;
 		this.employeeEmail=employeeEmail;
+	}
+	
+	public Employee(Employee emp)
+	{
+		this.employeeId=emp.employeeId;
+		this.employeeName=emp.employeeName;
+		this.employeePhone=emp.employeePhone;
+		this.employeeSalary=emp.employeeSalary;
+		this.employeeEmail=emp.employeeEmail;
+		
 	}
 	
 	
@@ -85,6 +96,12 @@ public class Employee {
 	{
 		System.out.println(this.employeeId + " "+this.employeeName+" "+this.employeeSalary+" "+this.employeePhone+" "+this.employeeEmail);
 		
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeSalary="
+				+ employeeSalary + ", employeeEmail=" + employeeEmail + ", employeePhone=" + employeePhone + "]";
 	}
 	
 }
